@@ -32,7 +32,7 @@ class ETLProcessor:
             #current_time = datetime.now()
             #rows_with_timestamps = [row + (current_time, current_time) for row in rows]
 
-            # 🔍 DEBUG
+            # DEBUG
             # print(f"SQL: {insert_sql}")
             # print(f"Exemplo de linha: {rows_with_timestamps[0]}")
             # print(f"Número de colunas na linha: {len(rows_with_timestamps[0])}")
@@ -57,4 +57,5 @@ class ETLProcessor:
         
     def close_cursor(self):
         self.source_cursor.close()
+
         self.target_cursor.close()
